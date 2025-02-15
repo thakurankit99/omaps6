@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>O-Maps - Project by Team Vayu Sena</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="The indoor map of Health Center North Campus IIT Mandi. designed by Sahil , Ankit. facilitates easy navigation for new visitors." name="keywords">
+    <meta content="The indoor map of Health Center North Campus IIT Mandi. designed by Sahil , Ankit. facilitates easy navigation for new visitors." name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--OMAPS Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/224fddad20.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white">O<span class="text-dark">-</span>MAP<br><h6 class="text-white" style="font-size: 13px;">Made with &#10084;&#65039; by Team Vayu Sena                    </h6></h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#aboutus" class="nav-item nav-link">About</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features (Beta)</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/livefeed_multi.html" class="dropdown-item">Street View (Multi Cam)</a>
+                                <a href="/livefeed_single.html" class="dropdown-item">Street View (Single Cam)</a>
+                            </div>
+                        </div>
+                        <a href="#feedback" class="nav-item nav-link">Feedback</a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Map Space Start -->
+    
+    <div class="container-fluid pt-5 bg-primary hero-header mb-5" id="home">
+        <div class="container pt-5">
+            <center>
+                <div id="fireAlert" style="display: none; background: red; color: white; text-align: center; padding: 15px; font-size: 20px;">
+                    🔥 Fire Alert Active! Follow Exit Route! 🔥
+                </div>
+                <div class="portfolio-item google-map rounded shadow-dark">
+
+                    <iframe src="https://app.mappedin.com/map/67af9483845fda000bf299c3?location=s_4a807c5e25da4122&floor=m_cdd612a0032a1f74" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    <a href="https://airc.spumca.in"><div class="topOverlay"></div></a>
+                    <a href="#"><div id="topOverlay2"></div></a>
+                    
+                    <div id="loadingMessage">Switching Map.. Please Wait... <i class="fa-regular fa-face-smile"></i></div>
+                    <div id="logoOverlay"></div>
+                    <div id="Switch360"></div>
+                    <div id="SwitchSLBSGMC"></div>
+                    <div class="bottomRightOverlay"></div>
+                    <div id="bottomLeftOverlay"></div>
+                </div>
+            </center>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
+    <!-- Map Space End -->
+
+
+
+    <!-- About Project -->
+    <div class="container-fluid py-5" id="aboutus">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid" src="/img/about-img.webp">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">About Us</div>
+                    <h1 class="mb-4">About this project</h1>
+                    <p class="mb-4">Indoor navigation presents a unique set of challenges compared to outdoor navigation. The absence of reliable GPS signals, intricate building layouts with multiple floors, and the dynamic nature of indoor environments make it difficult
+                        for users to find their way efficiently.</p>
+                    <p class="mb-4">To address these challenges and meet these evolving needs, we propose the development of an integrated indoor navigation and 360° virtual reality (VR) tour system. This innovative solution will combine the accuracy and intuitiveness
+                        of a modern navigation system with the immersive and exploratory capabilities of a virtual tour.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Project -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-white">O<span class="text-primary">-</span>MAP</h1>
+                    </a>
+                    <p class="mb-0">OMaps is an innovative indoor navigation and virtual tour platform designed to revolutionize the way users navigate and experience indoor environments. By seamlessly integrating intuitive 2D maps with immersive 360° virtual reality
+                        (VR) tours</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Mandi , Himachal Pradesh PIN - 175001</p>
+                    <!--  <p><i class="fa fa-phone-alt me-3"></i>01905-243945, 01905 243955</p> -->
+                    <p><i class="fa fa-envelope me-3"></i>sahilvatsi@spumca.in , ankitthakur@spumca.in</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Popular Link</h5>
+                    <a class="btn btn-link" href="#">About Us</a>
+                    <a class="btn btn-link" href="#">Contact Us</a>
+                    <a class="btn btn-link" href="#">Privacy Policy</a>
+                    <a class="btn btn-link" href="#">Terms & Condition</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Our Projects</h5>
+                    <a class="btn btn-link" href="#">Indoor Navigation</a>
+                    <a class="btn btn-link" href="#">360 Maps</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">O MAPs</a>, All Right Reserved. Designed By Team Vayu Sena
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="#">Home</a>
+                            <a href="#">Cookies</a>
+                            <a href="#">Help</a>
+                            <a href="#">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+    <!--OMAPS Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/switch.js"></script>
+</body>
+
+</html>

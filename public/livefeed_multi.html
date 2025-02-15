@@ -1,0 +1,219 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>O-Maps - Project by Sahil, Ankit</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="The indoor map of Health Center North Campus IIT Mandi. designed by Sahil, Ankit. facilitates easy navigation for new visitors." name="keywords">
+    <meta content="The indoor map of Health Center North Campus IIT Mandi. designed by Sahil, Ankit. facilitates easy navigation for new visitors." name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--OMAPS Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/224fddad20.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Input Container */
+        .input-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-container input {
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .input-container button {
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .input-container button:hover {
+            background: #0056b3;
+        }
+
+        /* Iframe Container */
+        .iframe-container {
+            display: grid;
+            gap: 10px;
+            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            border: 1px solid #ccc;
+            padding-top: 75%; /* 4:3 aspect ratio */
+        }
+
+        .iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .iframe-wrapper .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 0, 0, 0.7); /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .iframe-wrapper .close-btn:hover {
+            background: rgba(255, 0, 0, 1); /* Darker red on hover */
+        }
+
+        /* Spinner */
+        #spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            display: none;
+        }
+
+        /* Ensure the hero section stretches to accommodate more iframes */
+        .hero-header {
+            min-height: 100vh; /* Ensure the hero section takes at least the full height of the viewport */
+            padding-bottom: 20px; /* Add some padding to avoid content touching the bottom edge */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="/index.html" class="navbar-brand">
+                    <h1 class="text-white">O<span class="text-dark">-</span>MAP<br><h6 class="text-white" style="font-size: 13px;">Health Center IIT Mandi</h6></h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="/index.html#home" class="nav-item nav-link active">Home</a>
+                        <a href="/index.html#aboutus" class="nav-item nav-link">About</a>
+                        <a href="/index.html#ourguide" class="nav-item nav-link">Our Guide</a>
+                        <a href="/index.html#team" class="nav-item nav-link">Our Team</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features (Beta)</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="/livefeed_multi.html" class="dropdown-item">Street View (Multi Cam)</a>
+                                <a href="/livefeed_single.html" class="dropdown-item">Street View (Single Cam)</a>
+                            </div>
+                        </div>
+                        <a href="/index.html#feedback" class="nav-item nav-link">Feedback</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-primary hero-header" id="home">
+        <div class="container pt-5">
+            <center>
+                <div class="text-white">
+                    <div class="text-red">**Note:**</div> This system and the source device (camera) need to be on the same network to connect.
+                </div>
+
+                <div class="input-container centered">
+                    <label for="ipAddress" class="text-white">Enter IP Address:</label>
+                    <input type="text" id="ipAddress" placeholder="192.168.62.96" value="">
+                    <label for="port" class="text-white">Enter Port:</label>
+                    <input type="text" id="port" placeholder="4747" value="">
+                    <button id="loadIframeButton">Load</button>
+                </div>
+
+                <div class="iframe-container" id="iframeContainer">
+                    <!-- Dynamic iframes will be inserted here -->
+                </div>
+            </center>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+    <!--OMAPS Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/livefeed_multi.js"></script>
+</body>
+
+</html>
